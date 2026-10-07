@@ -13,3 +13,97 @@ body{background:#090a08}.site-header{position:fixed;padding:25px 4%;transition:b
 @media(prefers-reduced-motion:reduce){.hero-story{height:100svh;min-height:700px}.hero-sticky{height:100svh;min-height:700px}.hero-title-wrap,.hero-caption{opacity:1!important;transform:none!important}.scene-copy{display:none}.open-experience{display:none}.hero-poster{display:block}.material-section>img{transform:none!important}.intro-section h2>span{background:none;-webkit-text-fill-color:var(--paper);color:var(--paper)}.anatomy-story{height:850px;min-height:0}.anatomy-sticky{height:850px}.anatomy-art img{opacity:1!important;transform:none!important}.dieline{display:none}.hero-bottom .scroll-cue{visibility:hidden}}
 /* The fixed navigation keeps the quote action in reach. */
 .floating-quote{display:none}
+/* Subheadlines: three times the original size, with optical headline alignment. */
+:root {
+  --subheadline-size: 42px;
+  --intro-title-size: clamp(65px, 7.3vw, 125px);
+  --material-title-size: clamp(88px, 10vw, 170px);
+  --boxes-title-size: clamp(85px, 10vw, 170px);
+  --anatomy-title-size: clamp(85px, 8vw, 135px);
+  --process-title-size: 80px;
+  --quote-title-size: clamp(85px, 7.7vw, 125px);
+  --opening-title-size: clamp(88px, 10vw, 170px);
+}
+.hero-title-wrap > p,
+.section-kicker {
+  font-size: var(--subheadline-size);
+  line-height: 1.18;
+  text-wrap: balance;
+}
+.hero-title-wrap > p { margin-bottom: 28px; }
+.scene-copy > span {
+  font-size: 45px;
+  line-height: 1.18;
+  text-wrap: balance;
+}
+/* Match the visible left edge, compensating for the two fonts' side bearings. */
+.scene-copy-open > span {
+  margin-left: calc(var(--opening-title-size) * .062 - 1em * .075);
+}
+.intro-section > .section-kicker {
+  padding-left: calc(var(--intro-title-size) * .062 - 1em * .075);
+}
+.material-copy > .section-kicker {
+  padding-left: calc(var(--material-title-size) * .062 - 1em * .03);
+}
+.boxes-heading .section-kicker {
+  padding-left: calc(var(--boxes-title-size) * .048 - 1em * .03);
+}
+.anatomy-top .section-kicker {
+  font-size: var(--subheadline-size);
+  padding-left: calc(var(--anatomy-title-size) * .062 - 1em * .048);
+}
+.process-heading > .section-kicker {
+  padding-left: calc(var(--process-title-size) * .062 - 1em * .045);
+}
+.quote-intro > .section-kicker {
+  padding-left: calc(var(--quote-title-size) * .062 - 1em * .075);
+}
+.process-heading { display: block; }
+.process-heading h2 { width: auto; }
+.boxes-heading > div, .quote-intro, .quote-panel { min-width: 0; }
+.boxes-heading > p { flex: 0 0 27%; }
+.anatomy-top {
+  position: relative;
+  top: auto;
+  left: auto;
+  right: auto;
+  margin: 0 8%;
+  padding-top: 115px;
+  align-items: baseline;
+  gap: 24px;
+}
+.anatomy-top .scene-counter { flex-shrink: 0; }
+.anatomy-copy {
+  position: relative;
+  top: auto;
+  left: auto;
+  margin: 12px 8% 0;
+}
+@media (max-width: 1100px) {
+  :root { --anatomy-title-size: 90px; --quote-title-size: 85px; }
+}
+@media (max-width: 1050px) {
+  .anatomy-top { margin-inline: 6%; }
+  .anatomy-copy { margin-inline: 6%; }
+  .boxes-heading > p { flex-basis: auto; }
+}
+@media (max-width: 760px) {
+  :root {
+    --intro-title-size: 60px;
+    --material-title-size: 22vw;
+    --boxes-title-size: 24vw;
+    --anatomy-title-size: 20vw;
+    --process-title-size: 64px;
+    --quote-title-size: 21vw;
+    --opening-title-size: 23vw;
+  }
+  .hero-title-wrap > p { font-size: 39px; margin-bottom: 24px; }
+  .scene-copy > span { font-size: 42px; }
+  .scene-copy-open { right: 6%; }
+  .anatomy-top { padding-top: 95px; gap: 16px; }
+  .anatomy-top .section-kicker { font-size: 36px; width: 100%; }
+  .anatomy-top .scene-counter { position: absolute; top: 70px; right: 0; }
+  .anatomy-copy { margin-top: 0; }
+  .anatomy-art { top: 59%; height: 32%; }
+}
