@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b0b09">
+  <title>Quality Container — Built around what matters.</title>
+  <meta name="description" content="Corrugated boxes built around your products. Explore shipping boxes, custom sizes and printed packaging, then request a quote from Quality Container.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b0b09'/%3E%3Cpath d='M12 21 32 11 52 21 32 31 12 21v23l20 10 20-10V21M32 31v23M22 16l20 10' fill='none' stroke='%23c9ad79' stroke-width='3' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="./assets/fonts.css">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="preload" as="image" href="./assets/box-sequence/frame-001.jpg">
+  <link rel="stylesheet" href="./cinema.css">
+  <script src="./cinema.js" defer></script>
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="Quality Container home"><svg viewBox="0 0 44 48" aria-hidden="true"><path d="M3 13 22 3 41 13 22 23 3 13v22l19 10 19-10V13M22 23v22M12 8l19 10"/></svg><span>Quality<br>Container<span class="brand-dot">.</span></span></a>
+    <nav aria-label="Main navigation"><a href="#boxes">Our boxes</a><a href="#details">The details</a><a class="nav-cta" href="#quote">Request a quote</a></nav>
+  </header>
+  <main id="main">
+    <section class="hero-story" aria-labelledby="hero-title">
+      <div class="hero-sticky">
+        <img class="hero-poster" src="./assets/box-sequence/frame-001.jpg" alt="A sculptural kraft shipping box in a dark studio" width="1440" height="810">
+        <canvas id="box-canvas" aria-label="A corrugated box opens as you scroll" role="img"></canvas>
+        <div class="cinema-vignette"></div>
+        <div class="hero-title-wrap"><p>Quality. From the outside in.</p><h1 id="hero-title"><span>BEYOND</span><span>THE BOX.</span></h1></div>
+        <div class="hero-caption"><p>Corrugated packaging.<br>Remarkable possibilities.</p><a class="text-link" href="#quote">Build your box with us</a></div>
+        <button class="open-experience" type="button" aria-label="Play the box opening"><span>Open<br>possibilities</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l10 7-10 7Z"/></svg></button>
+        <div class="scene-copy scene-copy-open" aria-hidden="true"><span>Every great idea</span><strong>NEEDS<br>ITS SPACE.</strong><p>Your product. Your dimensions.<br>Your next first impression.</p></div>
+        <div class="scene-copy scene-copy-inside" aria-hidden="true"><span>It's what's inside that counts.</span><strong>WE PROTECT<br>THE POSSIBILITIES.</strong></div>
+        <div class="hero-bottom"><span class="scroll-cue">Scroll to open the box <span class="scroll-track"><i></i></span></span><div class="chapter-progress"><span id="chapter-label">01 — The possibility</span><div><i></i></div></div><button id="motion-toggle" type="button" aria-pressed="false">Pause motion</button></div>
+      </div>
+    </section>
+    <section class="intro-section section-pad" aria-labelledby="intro-title">
+      <div class="section-kicker"><span class="small-rule"></span>More than packaging</div>
+      <h2 id="intro-title">First, it holds your product.<br><span>Then, it carries your name.</span></h2>
+      <div class="intro-bottom"><p>From the first fold to the final delivery, your packaging has a job to do. We help you find a corrugated box that fits your product, your process, and your brand.</p><a class="text-link" href="#boxes">Explore the possibilities</a></div>
+    </section>
+    <section class="material-section" aria-labelledby="material-title">
+      <img src="./assets/corrugated-layers.jpg" alt="A close view of the fluted paper layer between two kraft liners" width="1920" height="1086" loading="lazy">
+      <div class="material-shade"></div><div class="material-copy"><p class="section-kicker">A closer look</p><h2 id="material-title">LIGHTWEIGHT.<br>HEAVY ON<br>PROTECTION.</h2><p>Light in your hands. Purposeful by design.<br>Corrugated board brings structure and cushioning together, giving your product a considered layer of protection.</p></div>
+      <span class="material-caption">Kraft paper · Fluted core · Liner</span>
+    </section>
+    <section id="boxes" class="boxes-section section-pad" aria-labelledby="boxes-title">
+      <div class="boxes-heading"><div><p class="section-kicker">A box for your next chapter</p><h2 id="boxes-title">ONE BOX.<br>YOUR WAY.</h2></div><p>Start with what you need your box to do.<br>We'll help with the details.</p></div>
+      <div class="box-explorer"><div class="product-visual"><img src="./assets/open-box-portal.jpg" alt="An open kraft shipping box with four folded flaps" width="1920" height="1086" loading="lazy"><div class="product-caption"><span>Room for a great idea.</span><span>Quality Container</span></div></div>
+        <div class="product-options">
+          <details open><summary><span>Shipping boxes</span><span class="detail-symbol" aria-hidden="true"></span></summary><div class="product-detail"><p>A practical foundation for packing and shipping. Tell us what you're sending, how it will travel, and the quantity you need.</p><div class="tags"><span>Everyday shipping</span><span>Product protection</span></div><button class="text-link choose-box" data-style="Shipping boxes">Get a shipping-box quote</button></div></details>
+          <details><summary><span>Custom sizes</span><span class="detail-symbol" aria-hidden="true"></span></summary><div class="product-detail"><p>Start with your product's dimensions. We'll discuss a fit that makes sense for your contents, packing materials, and handling needs.</p><div class="tags"><span>Made to fit</span><span>Thoughtful packing</span></div><button class="text-link choose-box" data-style="Custom sizes">Discuss my dimensions</button></div></details>
+          <details><summary><span>Printed packaging</span><span class="detail-symbol" aria-hidden="true"></span></summary><div class="product-detail"><p>Give your packaging a recognizable identity. Share your logo, artwork plans, and printing requirements with your quote request.</p><div class="tags"><span>Your identity</span><span>Your first impression</span></div><button class="text-link choose-box" data-style="Printed packaging">Explore a printed box</button></div></details>
+        </div>
+      </div>
+    </section>
+    <section id="details" class="anatomy-story" aria-labelledby="anatomy-title"><div class="anatomy-sticky">
+      <div class="anatomy-top"><p class="section-kicker">Considered from every angle</p><span class="scene-counter">02 / 03</span></div>
+      <div class="anatomy-copy"><h2 id="anatomy-title">DESIGNED<br>AROUND<br>YOU.</h2><p>The right box starts with the right questions. What's inside? How much protection does it need? How should it arrive?</p></div>
+      <div class="anatomy-art"><img src="./assets/open-box-portal.jpg" alt="Overhead view of the box, revealing its interior and four flaps" width="1920" height="1086" loading="lazy"><svg class="dieline" viewBox="0 0 760 540" role="img" aria-label="Illustrative box dieline showing four side panels, closure flaps, and scored folds"><defs><pattern id="grid" width="25" height="25" patternUnits="userSpaceOnUse"><path d="M25 0H0V25" fill="none" stroke="currentColor" stroke-width=".5" opacity=".15"/></pattern></defs><rect width="760" height="540" fill="url(#grid)"/><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M70 175V85H230V175M230 175V85H350V175M350 175V85H510V175M510 175V85H630V175M70 365V455H230V365M230 365V455H350V365M350 365V455H510V365M510 365V455H630V365M70 175H630V365H70Z M630 180L655 190V350L630 360"/><path stroke-dasharray="6 5" d="M70 175H630M70 365H630M230 175V365M350 175V365M510 175V365"/><path opacity=".7" d="M70 65V45H230V65M50 175H30V365H50M350 480V500H510V480"/></g><g fill="currentColor" font-family="DM Sans,sans-serif" font-size="15"><text x="150" y="34" text-anchor="middle">Length</text><text x="18" y="270" transform="rotate(-90 18 270)" text-anchor="middle">Depth</text><text x="430" y="524" text-anchor="middle">Fold. Form. Fit.</text><text x="285" y="278" text-anchor="middle">Width</text></g></svg></div>
+      <div class="anatomy-bottom"><span class="anatomy-label">From structure to possibility.</span><p>A precise fit begins with a conversation.</p><a class="text-link" href="#quote">Let's find yours</a></div>
+    </div></section>
+    <section class="process-section section-pad" aria-labelledby="process-title"><div class="process-heading"><p class="section-kicker">Straightforward from the start</p><h2 id="process-title">From an idea.<br>To your doorstep.</h2></div><div class="process-steps"><article><span class="step-number">01</span><h3>Tell us what you need.</h3><p>Share your box style, dimensions, quantity, and any special requirements. It's fine if you're still working out the details.</p></article><article><span class="step-number">02</span><h3>Find the right fit.</h3><p>We'll review your request together and discuss the specifications, printing, and options for your project.</p></article><article><span class="step-number">03</span><h3>Plan your next move.</h3><p>Confirm your quote and project details with our team before production and delivery are arranged.</p></article></div></section>
+    <section id="quote" class="quote-section section-pad" aria-labelledby="quote-title"><div class="quote-intro"><p class="section-kicker">Let's make something that fits</p><h2 id="quote-title">LET’S MAKE<br>YOUR NEXT<br>IMPRESSION.</h2><p>A few details are all we need to get started.<br>Tell us about your project.</p><div class="quote-contact"><span>Prefer to talk it through by email?</span><a href="mailto:alex@micro-printing.com">alex@micro-printing.com</a></div></div>
+      <div class="quote-panel"><div class="form-progress"><span id="step-label">Your packaging</span><span id="step-number">Step 1 of 2</span><div class="progress-line"><i></i></div></div>
+        <form id="quote-form" action="https://formsubmit.co/alex@micro-printing.com" method="POST">
+          <input type="hidden" name="_subject" value="Quality Container — New quote request"><input type="hidden" name="_template" value="table"><input type="hidden" name="_captcha" value="false"><div class="honey" aria-hidden="true"><label>Leave this field empty<input name="_honey" tabindex="-1" autocomplete="off"></label></div>
+          <fieldset data-step="1"><legend class="sr-only">Your packaging requirements</legend><label for="box-style">What are you looking for?</label><select id="box-style" name="Box style"><option>Shipping boxes</option><option>Custom sizes</option><option>Printed packaging</option><option>I need help choosing</option></select>
+            <div class="dimensions-heading"><label>Box dimensions <span>(optional)</span></label><select name="Units" aria-label="Dimension units"><option value="inches">Inches</option><option value="millimeters">Millimeters</option></select></div><div class="dimension-grid"><label for="length"><span>Length</span><input id="length" type="number" min="0.1" step="any" inputmode="decimal" name="Length" placeholder="L"></label><label for="width"><span>Width</span><input id="width" type="number" min="0.1" step="any" inputmode="decimal" name="Width" placeholder="W"></label><label for="depth"><span>Depth</span><input id="depth" type="number" min="0.1" step="any" inputmode="decimal" name="Depth" placeholder="D"></label></div><p class="field-help">Not sure about sizing? Leave it blank and we'll help.</p>
+            <div class="form-row"><div><label for="quantity">Approximate quantity</label><input id="quantity" type="number" min="1" max="100000000" step="1" name="Quantity" inputmode="numeric" placeholder="e.g. 500" required></div><div><label for="printing">Printing needs</label><select id="printing" name="Printing"><option>Not sure yet</option><option>Plain / unprinted</option><option>Logo or custom artwork</option></select></div></div>
+            <button type="button" id="next-step" class="button button-ink">Continue to your details</button>
+          </fieldset>
+          <fieldset data-step="2" hidden disabled><legend class="sr-only">Your contact details</legend><div class="form-row"><div><label for="name">Your name</label><input id="name" name="name" autocomplete="name" maxlength="120" required placeholder="Full name"></div><div><label for="company">Company <span>(optional)</span></label><input id="company" name="Company" autocomplete="organization" maxlength="160" placeholder="Company name"></div></div><label for="email">Email address</label><input id="email" type="email" name="email" autocomplete="email" maxlength="254" required placeholder="you@company.com"><label for="phone">Phone <span>(optional)</span></label><input id="phone" type="tel" name="Phone" autocomplete="tel" maxlength="50" placeholder="Phone number"><label for="message">Anything else we should know? <span>(optional)</span></label><textarea id="message" name="Project details" rows="3" maxlength="3000" placeholder="What you're packing, target dates, or special requirements…"></textarea><p class="privacy-note">Your details will be used to respond to your quote request. <a href="./privacy.html">Privacy information</a></p><div class="form-actions"><button type="button" id="prev-step" class="back-button">Back</button><button type="submit" class="button button-ink" id="submit-quote">Send quote request</button></div></fieldset>
+          <div id="form-status" role="status" aria-live="polite" hidden></div>
+        </form>
+      </div>
+    </section>
+    <section class="faq-section section-pad" aria-labelledby="faq-title"><h2 id="faq-title">A few good questions.</h2><div class="faq-list"><details><summary>What details do I need for a quote?<span class="detail-symbol" aria-hidden="true"></span></summary><p>A box style, approximate quantity, and your contact details are a good start. Dimensions, printing requirements, and information about your product help us understand the project.</p></details><details><summary>Can I request a custom size?<span class="detail-symbol" aria-hidden="true"></span></summary><p>Yes—choose “Custom sizes” in the quote form and share the dimensions you have in mind. Our team will review your requirements and discuss suitable options.</p></details><details><summary>What if I don't know which box I need?<span class="detail-symbol" aria-hidden="true"></span></summary><p>Select “I need help choosing” and tell us what you're packing and how it will be shipped. You can leave the dimensions blank.</p></details><details><summary>How do I discuss pricing and timing?<span class="detail-symbol" aria-hidden="true"></span></summary><p>Pricing and lead times depend on your specifications, quantity, and project needs. Include your target date in the form, and we'll discuss these details with your quote.</p></details></div></section>
+  </main>
+  <footer class="site-footer"><div class="footer-top"><a class="brand" href="#"><svg viewBox="0 0 44 48" aria-hidden="true"><path d="M3 13 22 3 41 13 22 23 3 13v22l19 10 19-10V13M22 23v22M12 8l19 10"/></svg><span>Quality<br>Container<span class="brand-dot">.</span></span></a><p>Built around what matters.</p><a href="mailto:alex@micro-printing.com">Let's talk packaging.</a></div><div class="footer-bottom"><span>© <span id="year">2026</span> Quality Container</span><a href="./privacy.html">Privacy</a><a href="#">Back to top</a></div></footer>
+  <a class="floating-quote" href="#quote">Request a quote</a>
+</body>
+</html>
