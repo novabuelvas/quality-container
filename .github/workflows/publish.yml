@@ -1,0 +1,42 @@
+name: Publish Quality Container
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: false
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Import the complete website on first run
+        run: |
+          if [ ! -f cinema.js ]; then
+            python3 -m zipfile -e quality-container-github.zip .
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add index.html privacy.html app.js cinema.js styles.css cinema.css assets README.md .gitignore .nojekyll
+            git commit -m "Import complete Quality Container website and animation assets"
+            git push origin HEAD:main
+          fi
+      - name: Prepare the public website
+        run: |
+          mkdir -p _site
+          cp index.html privacy.html app.js cinema.js styles.css cinema.css .nojekyll _site/
+          cp -R assets _site/assets
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - name: Publish website
+        id: deployment
+        uses: actions/deploy-pages@v5
